@@ -1,7 +1,9 @@
 ### **Test Case 4: Add the same product multiple times (quantity increase scenario)**
 
 **Test Case ID:** TC\_ADD\_004
+
 **Title:** Verify that adding the same product increases its quantity instead of duplicating the entry
+
 **Preconditions:**
 
 * User is logged in.
@@ -25,7 +27,9 @@
 ### **Test Case 5: Verify shopping list is accessible across different browsers/devices**
 
 **Test Case ID:** TC\_ADD\_005
+
 **Title:** Add item to shopping list, then login on another browser/device and verify list persistence
+
 **Preconditions:**
 
 * User has an ALDI account.
@@ -50,7 +54,9 @@
 ### **Test Case 6: Verify shopping list persistence after logout & login**
 
 **Test Case ID:** TC\_ADD\_006
+
 **Title:** Add a product to shopping list and verify persistence after logging out and back in
+
 **Preconditions:**
 
 * User is logged in.
