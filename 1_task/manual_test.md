@@ -1,4 +1,4 @@
-# Sample test cases - Add to shopping list feature 
+## Sample test cases - Add to shopping list feature 
 
 ### **Test Case 4: Add the same product multiple times (quantity increase scenario)**
 
@@ -74,7 +74,7 @@
 
 ---
 
-# Sample Bug Report – Shopping List Sync Issue
+## Sample Bug Report – Shopping List Sync Issue
 
 **Bug ID:** BUG\_ADD\_001
 
