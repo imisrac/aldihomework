@@ -1,3 +1,5 @@
+# Sample test cases - Add to shopping list feature 
+
 ### **Test Case 4: Add the same product multiple times (quantity increase scenario)**
 
 **Test Case ID:** TC\_ADD\_004
@@ -21,8 +23,6 @@
 * The shopping list should show **one entry** for “Orange Juice.”
 * Quantity should be updated to **2**.
 * Total price should reflect updated quantity.
-
----
 
 ### **Test Case 5: Verify shopping list is accessible across different browsers/devices**
 
@@ -49,8 +49,6 @@
 * The shopping list in Browser B should show the same product (“Tomatoes”).
 * List data is synced across browsers/devices for the same account.
 
----
-
 ### **Test Case 6: Verify shopping list persistence after logout & login**
 
 **Test Case ID:** TC\_ADD\_006
@@ -75,3 +73,52 @@
 * List persistence is maintained across sessions.
 
 ---
+
+# Sample Bug Report – Shopping List Sync Issue
+
+**Bug ID:** BUG\_ADD\_001
+
+**Title:** Shopping list items do not sync across different browsers/devices
+
+**Severity:** High
+
+**Reported By:** Imre Csermőy-Németh
+
+**Related Test Case IDs:** TC\_ADD\_005
+
+**Environment:**
+
+* Testing Environment: QA (qa.aldi.dev)
+* Browser A: Chrome 116 (Windows 11)
+* Browser B: Firefox 117 (macOS Ventura)
+* Backend Version: API v2.3.1
+* Frontend Version: Web App v5.4.2
+
+**Preconditions:**
+
+* User has a registered ALDI account.
+* Shopping list is initially empty.
+
+**Steps to Reproduce:**
+
+1. Open **Browser A (Chrome)** and log in with valid credentials.
+2. Add a product (e.g., “Tomatoes”) to the shopping list.
+3. Logout (optional).
+4. Open **Browser B (Firefox)** on another device or system.
+5. Login with the same account.
+6. Navigate to the shopping list page.
+
+**Expected Result:**
+
+* The shopping list should display “Tomatoes” in Browser B as well, synced with Browser A.
+
+**Actual Result:**
+
+* The shopping list in Browser B is empty.
+* Items added in Browser A are not reflected across sessions/devices.
+
+**Attachments:**
+
+* Screenshot from Browser A showing “Tomatoes” in the shopping list.
+* Screenshot from Browser B showing an empty shopping list.
+* Console logs from both browsers.
