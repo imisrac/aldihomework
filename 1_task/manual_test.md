@@ -72,6 +72,30 @@
 * The product (“Cereal”) should still be present in the shopping list.
 * List persistence is maintained across sessions.
 
+### **Test Case 7: Verify system behavior when user session expires and then tries to add a product to shopping list**
+
+**Test Case ID:** TC\_ADD\_007
+
+**Title:** Try to add a product to shopping list after session expired
+
+**Preconditions:**
+
+* User is logged in.
+* User session lifetime is configured (e.g., 10 seconds of inactivity).
+* Shopping list is empty.
+
+**Test Steps:**
+
+1. Navigate to a product category (e.g., "Dairy & Eggs").
+2. Leave the browser idle until the session expires (e.g., 15 seconds of inactivity).
+3. After timeout, attempt to add a product (e.g., “Milk 1 Gallon”) to the shopping list by clicking “Add to Shopping List.”
+
+**Expected Result:**
+
+* The system should not add the product to the shopping list.
+* User should be redirected to the login page or shown a “Session expired – please log in again” message.
+* Once logged back in, the user should be able to add the product successfully.
+
 ---
 
 ## Sample Bug Report – Shopping List Sync Issue
