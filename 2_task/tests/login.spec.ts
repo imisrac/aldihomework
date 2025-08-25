@@ -22,7 +22,7 @@ test.describe('Login Feature', () => {
 
     await expect(page.locator('.error-message'))
       .toHaveText('Invalid username or password');
-    await expect(page).toHaveURL(/.*login/);
+    await expect(page).toHaveURL(/.*log-in.html/);
   });
 
 });

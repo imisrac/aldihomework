@@ -15,11 +15,11 @@ But it is more:
 
 ### How would I set up a test environment with docker?
 
-Hopefully the software to test is containerized.
+Hopefully the software to test is containerized too.
 I would use some scripts (e.g. bash), docker-compose and a test runner (e.g. npx playwright)
 
 * scripts are good to control the whole operation and are also gives the tester flexibility (e.g. to inject test data)
-* docker-compose can handle dependencies (e.g. database, webservice)
+* docker-compose can handle dependencies (e.g. database, webservice) and deploy the software to test
 * when the environment is ready, the script can also call the test runner
 * the test runner will execute the tests then create and publish reports
 
@@ -27,7 +27,8 @@ I would use some scripts (e.g. bash), docker-compose and a test runner (e.g. npx
 
 # CI
 
-I'm familiar with Jenkins and gitHub as CI tools. Both of them are able to run tests.
+I'm familiar with Jenkins and gitHub as CI tools.
+
 Main ingredients I would use:
 * git
 * CI tool
@@ -43,8 +44,8 @@ Can be triggered by a push in git.
 Also, the CI tool should be able to run the tests (gitHub actions, jenkins runners)
 
 ### test report tool
-It is very useful to see multiple test results at the same time. This can tell us when a failure happens the given software version where it appears first.
-There are multiple solutions are out there already for this (e.g. allure). But basically it is just a database and a web frontend (like playwright provides).
+It is very useful to see multiple test results at the same time. E.g. it can tell us when a failure happens the given software version where it appears first.
+There are multiple solutions are out there already for this (e.g. Allure). But basically it is just a database and a web frontend (like playwright provides).
 
 ### when to run
 * functional tests should run on every pull request (to prevent fails in main branch)
